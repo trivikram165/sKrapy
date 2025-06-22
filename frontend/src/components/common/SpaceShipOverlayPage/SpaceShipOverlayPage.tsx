@@ -188,6 +188,7 @@ const SpaceShipOverlayPage: FC<Props> = ({
           src="/images/layout/rocket-spaceship.png"
           width={100}
           height={100}
+          alt="Rocket spaceship taking off"
         />
       </div>
 
