@@ -4,7 +4,6 @@ import { useFetchWrapper } from "src/_helpers";
 import { authAtom } from "src/_state/auth";
 import { CartItem } from "./cart";
 
-// ... (Order interface is the same) ...
 export interface Order {
   id: number;
   userId: number;
@@ -40,8 +39,6 @@ export function useOrders() {
         } finally {
             setLoading(false);
         }
-    // --- THIS IS THE FIX FOR THE WARNING ---
-    // The linter wants to know that this function depends on these values.
     }, [auth, fetchWrapper]); 
 
     const createOrder = useCallback(async () => {
@@ -59,7 +56,6 @@ export function useOrders() {
         } finally {
             setLoading(false);
         }
-
     }, [auth, fetchWrapper]);
 
     return { orders, loading, error, fetchOrders, createOrder };
