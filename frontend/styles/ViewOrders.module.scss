@@ -1,0 +1,296 @@
+@import "./variables.scss";
+
+.container {
+  background-color: #000;
+  color: #43B31F;
+  padding: 6rem 3rem;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.heading {
+  font-family: "Mohave", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 5rem;
+  color: #EFF3F1;
+  margin: 0;
+  @include devices(mobile) {
+    font-size: 3rem;
+  }
+}
+
+.sellScrapButton {
+  background-color: #43B31F;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  &:hover {
+    background-color: #33ca14;
+    transform: translateY(-2px);
+  }
+}
+
+.logoutButton {
+  background-color: #ff4444;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  &:hover {
+    background-color: #cc3333;
+    transform: translateY(-2px);
+  }
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #43B31F;
+  margin-top: 3rem;
+  font-family: "Inter", sans-serif;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ff4444;
+  margin-top: 3rem;
+  font-family: "Inter", sans-serif;
+}
+
+.noOrders {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #EFF3F1;
+  opacity: 0.8;
+  margin-top: 3rem;
+  font-family: "Inter", sans-serif;
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.orderItem {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 25px rgba(67, 179, 31, 0.2);
+  }
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  @include devices(mobile) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.orderId {
+  font-family: "Mohave", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #EFF3F1;
+  margin: 0;
+}
+
+.orderTimestamp {
+  font-size: 1rem;
+  color: #EFF3F1;
+  opacity: 0.7;
+  font-family: "Inter", sans-serif;
+}
+
+.orderItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.orderItemDetail {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.itemName {
+  font-family: "Mohave", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #EFF3F1;
+  margin: 0 0 0.5rem 0;
+}
+
+.itemInfo {
+  font-size: 1rem;
+  color: #EFF3F1;
+  margin: 0.3rem 0;
+  font-family: "Inter", sans-serif;
+}
+
+.orderSummary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+  @include devices(mobile) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.totalPrice {
+  font-family: "Mohave", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #43B31F;
+  margin: 0;
+}
+
+
+.popupBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  max-width: 450px;
+  width: 90%;
+  color: #EFF3F1;
+
+  h3 {
+    font-family: "Mohave", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+}
+
+.addressInfo {
+  background-color: #2c2c2c;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: left;
+
+  span {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  code {
+    display: block;
+    font-family: monospace;
+    word-break: break-all;
+    font-size: 1rem;
+    color: #43B31F;
+    margin-top: 0.5rem;
+  }
+}
+
+.popupButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.popupCancelButton {
+  background-color: #555;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover:not(:disabled) {
+    background-color: #666;
+  }
+}
+
+.popupConfirmButton {
+  background-color: #43B31F;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover:not(:disabled) {
+    background-color: #33ca14;
+  }
+  &:disabled {
+    background-color: #2a2a2a;
+    color: #555;
+    cursor: not-allowed;
+  }
+}
+
