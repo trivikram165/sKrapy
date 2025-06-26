@@ -16,8 +16,7 @@ const Banner = () => {
           <Image
             src="/images/layout/nftBanner2.jpg"
             alt="nftBanner"
-            objectFit="contain"
-            objectPosition="center"
+            style={{ objectFit: "cover", objectPosition: "center" }}
             layout="fill"
             quality={100}
           />

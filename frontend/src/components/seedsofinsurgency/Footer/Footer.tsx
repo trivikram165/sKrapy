@@ -40,13 +40,13 @@ const Footer: FC = () => {
             </div>
           </div>
           <div className="col-md-4 order-md-1">
-            <div className={s.links}>
+            {/* <div className={s.links}>
               {AppConstant.footer.links.map((item, i) => (
                 <Link href={item.href} key={i}>
                   <a target="_blank">{item.label}</a>
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

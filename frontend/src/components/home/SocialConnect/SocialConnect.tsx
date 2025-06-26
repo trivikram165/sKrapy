@@ -17,7 +17,7 @@ const SocialConnect: FC = () => {
                 src="/images/layout/jacket.png"
                 width={300}
                 height={400}
-                objectFit="contain"
+                style={{ objectFit: "contain" }}
                 alt={"Join Us"}
               />
               <span className={s.title}>
@@ -44,8 +44,7 @@ const SocialConnect: FC = () => {
                         width={50}
                         height={50}
                         alt={item.name}
-                        objectPosition="center"
-                        objectFit="contain"
+                        style={{ objectFit: "contain" , objectPosition: "center"}}
                       />
                     </div>
                     <span className={s.name}>{item.name}</span>

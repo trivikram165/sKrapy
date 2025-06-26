@@ -7,10 +7,7 @@ import s from "./HeroBanner.module.scss";
 const HeroBanner: FC = () => {
   return (
     <div className={s.container}>
-
-
       <div className={s.items}>
-
         <div className={s.item}>
           <div className={`${s.imageWrapper} ${s.heading1}`}>
             <h1 className={s.headingText}>
@@ -25,7 +22,7 @@ const HeroBanner: FC = () => {
               src="/images/layout/paint-drop-1.png"
               width={220}
               height={240}
-              objectFit="contain"
+              style={{objectFit: "contain"}}
               alt=""
             />
             <div className={s.drop}>
@@ -33,7 +30,7 @@ const HeroBanner: FC = () => {
                 src="/images/layout/paint-drop-2.png"
                 width={200}
                 height={230}
-                objectFit="contain"
+                style={{objectFit: "contain"}}
                 alt=""
               />
             </div>
@@ -44,7 +41,7 @@ const HeroBanner: FC = () => {
               src="/images/layout/paint-drop-1.png"
               width={220}
               height={240}
-              objectFit="contain"
+                style={{objectFit: "contain"}}
               alt=""
             />
             <div className={s.drop}>
@@ -52,7 +49,7 @@ const HeroBanner: FC = () => {
                 src="/images/layout/paint-drop-2.png"
                 width={200}
                 height={230}
-                objectFit="contain"
+                style={{objectFit: "contain"}}
                 alt=""
               />
             </div>

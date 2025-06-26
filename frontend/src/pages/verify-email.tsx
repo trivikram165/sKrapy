@@ -42,9 +42,9 @@ const VerifyEmail: FC = () => {
         {error && (
           <p className={s.linkText}>
             Back to{" "}
-            <Link href="/login">
-              <a className={s.link}>Login</a>
-            </Link>
+          <Link href="/login" className={s.link}>
+            Login
+          </Link>
           </p>
         )}
       </div>

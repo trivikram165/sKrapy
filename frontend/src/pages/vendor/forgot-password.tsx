@@ -55,8 +55,8 @@ const VendorForgotPassword: FC = () => {
         </form>
         <p className={s.linkText}>
           Back to{" "}
-          <Link href="/vendor/login">
-            <a className={s.link}>Login</a>
+          <Link href="/vendor/login" className={s.link}>
+            Login
           </Link>
         </p>
       </div>

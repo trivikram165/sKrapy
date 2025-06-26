@@ -14,9 +14,7 @@ const Header: FC = () => {
         </div>
         <div className={s.brandLogo}>
           <Link href="/">
-            <a>
               <SVGBrandLogo />
-            </a>
           </Link>
         </div>
         <div className={s.walletConnect}>

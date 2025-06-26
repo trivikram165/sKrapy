@@ -45,7 +45,7 @@ const SpaceShipPage = () => {
                 <Image
                   src="/images/spaceship-logo.svg"
                   alt="spaceship-logo"
-                  objectFit="contain"
+                  style={{ objectFit: "contain" }}
                   width={175}
                   height={55}
                 />
@@ -54,7 +54,7 @@ const SpaceShipPage = () => {
           <Image
             src="/images/rocket.png"
             alt="spaceship-logo"
-            objectFit="contain"
+            style={{ objectFit: "contain" }}
             width={843}
             height={982}
           />
@@ -137,7 +137,7 @@ const SpaceShipPage = () => {
                   {/* <Image
               src="/images/plus.svg"
               alt="spaceship-logo"
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
               width={40}
               height={40}
             /> */}
@@ -170,7 +170,7 @@ const SpaceShipPage = () => {
                   {/* <Image
               src="/images/x.svg"
               alt="spaceship-logo"
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
               width={40}
               height={40}
             /> */}
@@ -179,7 +179,7 @@ const SpaceShipPage = () => {
                 {/* <Image
             src="/images/x-icons.svg"
             alt="spaceship-logo"
-            objectFit="contain"
+            style={{ objectFit: "contain" }}
             width={470}
             height={50}
           /> */}

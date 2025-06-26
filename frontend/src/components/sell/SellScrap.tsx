@@ -143,7 +143,7 @@ const SellScrap: FC = () => {
                 {scraps.map((scrap) => (
                     <div key={scrap.id} className={s.scrapItem}>
                         <div className={s.scrapImageWrapper}>
-                            <Image src={scrap.image} alt={scrap.name} width={150} height={150} objectFit="cover" />
+                            <Image src={scrap.image} alt={scrap.name} width={150} height={150} style={{objectFit: "cover"}} />
                         </div>
                         <div className={s.scrapDetails}>
                             <h3 className={s.scrapName}>{scrap.name}</h3>
@@ -169,7 +169,7 @@ const SellScrap: FC = () => {
                     <div className={s.cartBackdrop} onClick={() => setIsCartOpen(false)} />
                     <div className={`${s.cartSidebar} ${s.open}`} onClick={(e) => e.stopPropagation()}>
                         <div className={s.cartHeader}><h2 className={s.cartHeading}>Your Cart</h2><button onClick={() => setIsCartOpen(false)} className={s.closeButton}>×</button></div>
-                        <div className={s.cartBody}>{(!cart || cart.items.length === 0) ? (<p className={s.emptyCart}>Your cart is empty.</p>) : (<div className={s.cartItemsList}>{cart.items.map((item: CartItem) => (<div key={item.scrap.id} className={s.cartItem}><div className={s.cartItemImage}><Image src={item.scrap.image} alt={item.scrap.name} width={60} height={60} objectFit="cover" /></div><div className={s.cartItemDetails}><span className={s.cartItemName}>{item.scrap.name}</span><span className={s.cartItemSubtext}>{item.quantity} kg @ ₹{item.scrap.pricePerKg}/kg</span></div><div className={s.cartItemPrice}>₹{(item.scrap.pricePerKg * item.quantity).toFixed(2)}</div><button onClick={() => removeFromCart(item.scrap.id)} className={s.removeItemButton}>×</button></div>))}</div>)}</div>
+                        <div className={s.cartBody}>{(!cart || cart.items.length === 0) ? (<p className={s.emptyCart}>Your cart is empty.</p>) : (<div className={s.cartItemsList}>{cart.items.map((item: CartItem) => (<div key={item.scrap.id} className={s.cartItem}><div className={s.cartItemImage}><Image src={item.scrap.image} alt={item.scrap.name} width={60} height={60} style={{objectFit: "cover"}} /></div><div className={s.cartItemDetails}><span className={s.cartItemName}>{item.scrap.name}</span><span className={s.cartItemSubtext}>{item.quantity} kg @ ₹{item.scrap.pricePerKg}/kg</span></div><div className={s.cartItemPrice}>₹{(item.scrap.pricePerKg * item.quantity).toFixed(2)}</div><button onClick={() => removeFromCart(item.scrap.id)} className={s.removeItemButton}>×</button></div>))}</div>)}</div>
                         <div className={s.cartFooter}><div className={s.cartTotal}><span>Total</span><span>₹{totalPrice.toFixed(2)}</span></div><button onClick={handleProceedToSell} className={s.proceedButton} disabled={totalQuantity === 0}>Proceed to Sell</button><button onClick={clearCart} className={s.clearCartButton} disabled={totalQuantity === 0}>Clear Cart</button></div>
                     </div>
                 </>

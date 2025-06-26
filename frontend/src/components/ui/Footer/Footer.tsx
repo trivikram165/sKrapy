@@ -14,13 +14,13 @@ const Footer: FC = () => {
         <div className={`row ${s.row}`}>
           <div className="col-md-4 order-md-2">
             <div className={s.brand}>
-              <img src="/images/logo-full.png" alt="" />
+              <img src="/images/logo-full.png" alt="sKrapy Logo" />
             </div>
           </div>
 
           <div className="col-md-4 order-md-3">
             <div className={s.socials}>
-              <a href=""></a>
+              {/* This part is using standard <a> tags for external links, which is fine. No changes needed here. */}
               {AppConstant.socials.map((item, i) => (
                 <a
                   href={item.url}
@@ -37,11 +37,16 @@ const Footer: FC = () => {
           </div>
           <div className="col-md-4 order-md-1">
             <div className={s.links}>
+              {/* --- THIS IS THE CORRECTED BLOCK --- */}
               {AppConstant.footer.links.map((item, i) => (
-                <Link href="#" key={i}>
-                  <a href={item.href} target="_blank" rel="noreferrer">
-                    {item.label}
-                  </a>
+                <Link
+                  href={item.href}
+                  key={i}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={s.link}
+                >
+                  {item.label}
                 </Link>
               ))}
             </div>

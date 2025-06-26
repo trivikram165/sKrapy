@@ -16,8 +16,7 @@ const ContactUs: FC = () => {
           width={520}
           height={600}
           alt=""
-          objectFit="contain"
-          objectPosition="center"
+          style={{ objectFit: "contain" , objectPosition: "center" }}
         />
       </div>
       <div className={s.titleWrapper}>

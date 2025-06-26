@@ -16,7 +16,7 @@ const WhoAreWe: FC = () => {
             src="/images/layout/team01.jpg"
             width={1300}
             height={770}
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             alt=""
           />
         </div>

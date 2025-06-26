@@ -56,7 +56,7 @@ const OurWork: FC = () => {
                     width={400}
                     height={400}
                     alt={product.name}
-                    objectFit="contain"
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
                 {/* <a
